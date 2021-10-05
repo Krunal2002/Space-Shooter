@@ -18,7 +18,7 @@ pygame.display.set_caption('Space Shooter')
 pygame.display.set_icon(icon)
 
 
-#Sound
+#Load Game Sounds
 shootSound = pygame.mixer.Sound("bulletSound.wav")
 explodeSound = pygame.mixer.Sound("explSound.wav")
 crashSound =  pygame.mixer.Sound("crash.ogg")
@@ -26,7 +26,6 @@ gameMusic = pygame.mixer.music.load("music.ogg")
 #-------------------
 
 running = True
-score = 0
 
 #For displaying plane on screen
 plane = pygame.image.load('plane.png')
@@ -64,11 +63,6 @@ astroidY = []
 speedX = []
 speedY = []
 
-# astroid2 = pygame.image.load('astroid.png')
-# astroid4 = pygame.image.load('astroid3.png')
-# astroid5 = pygame.image.load('astroid4.png')
-# astroid6 = pygame.image.load('astroid5.png')
-# astroid7 = pygame.image.load('astroid6.png')
 
 totalAstroid = 6
 
@@ -102,6 +96,7 @@ def isCollision(astroidX, astroidY, bulletX, bulletY):
 
 
 #For showing score
+score = 0
 font = pygame.font.Font('freesansbold.ttf', 25)
 
 def showScore(score):
